@@ -6,7 +6,7 @@
 
 int main() {
   // Dosyayı aç
-    FILE *fp = fopen("input.ppm", "wb");
+    FILE *fp = fopen("test.ppm", "wb");
  
     if (!fp) {
         perror("File creation");
@@ -18,7 +18,7 @@ int main() {
   // Pikselleri yaz
   for (int i = 0; i < WIDTH; i++) {
     for (int j = 0; j < HEIGHT; j++) {
-      fprintf(fp, "%d %d %d ", 255, 255, 0);
+      fprintf(fp, "%d %d %d ", 255, 0, 255);
     }
     fprintf(fp, "\n");
   }

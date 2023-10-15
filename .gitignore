@@ -1,0 +1,5 @@
+# Ignore files
+*.o
+*.exe
+*.ppm
+*.png
