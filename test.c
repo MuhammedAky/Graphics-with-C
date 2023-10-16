@@ -4,8 +4,17 @@
 #define HEIGHT 250
 
 int main(void) {
+
     uint32_t pixels[WIDTH * HEIGHT];
-    craftix_fill(pixels, WIDTH, HEIGHT, 0xFF8080FF);
+    
+    craftix_fill(pixels, WIDTH, HEIGHT, 0x000000);
+
+    craftix_draw_rect(pixels, WIDTH, HEIGHT, 0, 0, 80, 40, 0x808080);
+
+    craftix_draw_circle(pixels, WIDTH, HEIGHT, 75, 75, 15, 0xFF0000);
+    
     save_ppm_file(pixels, WIDTH, HEIGHT, "output.ppm");
+    
+    
     return 0;
 }
