@@ -3,9 +3,9 @@ CC = gcc
 CFLAGS = -std=c99 -o
 
 # target file
-all: main.exe
-	$(CC) $(CFLAGS) main.exe main.c
-	./main.exe
+all: test.c craftix.c
+	$(CC) $(CFLAGS) test.exe craftix.c test.c
+	./test.exe
 	@$(MAKE) run_converter
 
 # run python script
@@ -14,6 +14,6 @@ run_converter: converter.py
 
 # clean
 clean:
-	rm -f main.exe
+	rm -f test.exe
 
 .DEFAULT_GOAL := all
