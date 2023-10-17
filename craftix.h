@@ -15,6 +15,10 @@ void craftix_draw_circle(uint32_t *pixels, size_t pixels_width, size_t pixels_he
     int cx, int cy, int r,
     uint32_t color);
 
+void craftix_draw_line(uint32_t *pixels, size_t pixels_width, size_t pixels_height,
+                      int x1, int y1, int x2, int y2,
+                      uint32_t color);
+
 bool save_ppm_file(uint32_t *pixels, size_t width, size_t height, const char *file_path);
 
 #endif // CRAFTIX_H

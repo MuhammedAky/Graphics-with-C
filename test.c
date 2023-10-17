@@ -13,6 +13,8 @@ int main(void) {
 
     craftix_draw_circle(pixels, WIDTH, HEIGHT, 75, 75, 15, 0xFF0000);
     
+    craftix_draw_line(pixels, WIDTH, HEIGHT, 10, 150, 70, 220, 0x202020);
+    
     save_ppm_file(pixels, WIDTH, HEIGHT, "output.ppm");
     
     
